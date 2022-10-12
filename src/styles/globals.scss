@@ -5,3 +5,14 @@
 }
 
 // TODO
+:root {
+  --color-1: #1A1D23;
+  --color-2:#FF57B2;
+  --color-3: #D7D7D7;
+  --color-4: #F8F8F8;
+
+}
+
+body {
+  background: var(--color-1);
+}

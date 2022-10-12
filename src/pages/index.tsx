@@ -1,4 +1,6 @@
 import { GetStaticProps } from 'next';
+import { ReactElement } from 'react';
+import Header from '../components/Header';
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -24,13 +26,18 @@ interface HomeProps {
   postsPagination: PostPagination;
 }
 
-// export default function Home() {
-//   // TODO
-// }
+export default function Home(): ReactElement {
+  // TODO
+  return (
+    <>
+      <Header />
+    </>
+  );
+}
 
 // export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient({});
-//   // const postsResponse = await prismic.getByType(TODO);
+//   const prismic = getPrismicClient({});
+//   const postsResponse = await prismic.getByType(TODO);
 
-//   // TODO
+//   TODO;
 // };
