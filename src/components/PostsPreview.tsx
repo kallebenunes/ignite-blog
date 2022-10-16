@@ -10,19 +10,11 @@ type PostPreviewProps = {
 };
 
 const PostPreview = ({ postsList }: PostPreviewProps): ReactElement => {
-  console.log(postsList);
   return (
     <ul>
       {postsList.map(post => (
         <li key={post.uid}>
-          <Link
-            href={`/post/${post.data.title
-              .toLowerCase()
-              .replace(/\s/g, '-')
-              .replace(/\W/g, match => {
-                return match === '-' ? '-' : '';
-              })}`}
-          >
+          <Link href={`/post/${post.uid}`}>
             <a>
               <h1>{post.data.title}</h1>
               <h2>{post.data.subtitle}</h2>

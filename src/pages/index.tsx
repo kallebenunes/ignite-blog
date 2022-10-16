@@ -55,17 +55,12 @@ export default function Home({ postsPagination }: HomeProps): ReactElement {
     }
   }
 
-  useEffect(() => {
-    console.log(postsPagination);
-  }, []);
-
   function handleFetchMore(): void {
     fetchMorePosts(nextPage);
   }
 
   return (
     <>
-      <Header />
       <section>
         <PostPreview postsList={postsList} />
         {postsPagination.next_page && (
