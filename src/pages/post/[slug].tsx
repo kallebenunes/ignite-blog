@@ -37,9 +37,13 @@ interface PostProps {
 //   // TODO
 // };
 
-// export const getStaticProps = async ({params }) => {
+// export const getStaticProps: GetStaticProps = async context => {
 //   const prismic = getPrismicClient({});
 //   const response = await prismic.getByUID(TODO);
 
-//   // TODO
+//   return {
+//     props: {
+//       teste: 'OI',
+//     },
+//   };
 // };
