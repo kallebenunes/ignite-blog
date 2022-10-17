@@ -1,16 +1,12 @@
 import { GetStaticProps } from 'next';
 import { ReactElement, useEffect } from 'react';
-import { format } from 'date-fns';
-// import ptBR from 'date-fns/esm/locale/pt-BR';
 
-import ptBR from 'date-fns/locale/pt-BR';
 import { useState } from 'react';
-import Header from '../components/Header';
 
 import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
-import PostPreview from '../components/PostsPreview';
+import PostPreview from '../components/PostPreview';
 
 export interface Post {
   uid?: string;
@@ -61,10 +57,14 @@ export default function Home({ postsPagination }: HomeProps): ReactElement {
 
   return (
     <>
-      <section>
+      <section className={commonStyles.container}>
         <PostPreview postsList={postsList} />
         {postsPagination.next_page && (
-          <button onClick={handleFetchMore} type="button">
+          <button
+            className={styles.fetchMorePosts}
+            onClick={handleFetchMore}
+            type="button"
+          >
             Carregar mais posts
           </button>
         )}

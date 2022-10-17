@@ -10,9 +10,22 @@
   --color-2:#FF57B2;
   --color-3: #D7D7D7;
   --color-4: #F8F8F8;
+  font-size: 16px;
 
+}
+html {
+  font-family: 'Inter';
+  color: var(--color-3);
 }
 
 body {
   background: var(--color-1);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
